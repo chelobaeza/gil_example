@@ -1,0 +1,22 @@
+
+services:
+  python310:
+    container_name: python_instance310
+    build: 
+      context: .
+      target: python310
+    image: python_image
+    volumes:
+      - .:/code
+    entrypoint: python
+  python311: 
+    container_name: python_instance311
+    build: 
+      context: .
+      target: python311
+    image: python311_image
+    volumes:
+      - .:/code
+    entrypoint: python
+
+  
